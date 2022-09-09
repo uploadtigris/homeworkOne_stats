@@ -1,0 +1,52 @@
+---
+title: "Homework 1 Extra Credit"
+author: "Tigris Mendez"
+date: "2022-09-09"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+name <- c("Barcelona", "Berlin", "Lisbon", "London", "Paris", "Rome")
+high <- c(14, 2, 14, 5, 2, 14)
+low <- c(6, -1, 3, 0, -3, 3)
+```
+
+```{r}
+DS <- data.frame(NAME=name, HIGH=high, LOW=low)
+```
+
+```{r}
+summary(high)
+summary(low)
+```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r height, echo=FALSE}
+nbaheight <- c(72, 72, 73, 74, 74, 74, 74, 74, 75, 75,
+              76, 76, 77, 77, 77, 77, 78, 78, 80, 80,
+              80, 81, 81, 81, 81, 82, 82, 82, 84, 86)
+
+dotchart(nbaheight, main='NBA Player Heights', 
+        xlab="Heights",
+        ylab="# of players",
+        sub="in cm", 
+        col.main="red", 
+        col.lab="blue", 
+        col.sub="black",
+        cex.sub=0.7)
+```
+
+
+```{r}
+p <- c(4, 2 , 1, 2, 1, 4, 3, 0, 4, 2, 0, 1, 0, 4, 2, 3, 1, 2, 1, 3)
+p[order(p)]
+```
+
+```{r}
+mean(p)
+median(p)
+```
+
